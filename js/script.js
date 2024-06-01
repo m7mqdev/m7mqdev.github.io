@@ -1,6 +1,7 @@
 let interestContent;
 document.addEventListener("DOMContentLoaded", (ev) => {
 
+    document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
     themeBtn.addEventListener("click", () => {
         const icon = themeBtn.querySelector("i");

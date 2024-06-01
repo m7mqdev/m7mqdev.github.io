@@ -47,7 +47,7 @@
                 <ul>
                     <li class="link-layout"><a href="#intro" class="link"><i class="fa-solid fa-house"></i>Home</a></li>
                     <li class="link-layout"><a href="#interests" class="link"><i
-                                class="fa-solid fa-list-check"></i>Projects</a>
+                                class="fa-solid fa-star"></i>Interests</a>
                     </li>
                     <li class="link-layout"><a href="#tools" class="link"><i class="fa-solid fa-hammer"></i>Tools</a>
                     <li class="link-layout"><a href="#projects" class="link"><i
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section class="interests sec">
+        <section class="interests sec" id="interests">
             <h2 class="sec-heading">Interests</h2>
             <div class="sec-layout">
                 <div class="interest-content">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </section>
-        <section class="tools sec">
+        <section class="tools sec" id="tools">
             <h2 class="sec-heading">Tools</h2>
             <div class="sec-layout">
                 <a href="https://www.java.com/" target="_blank">
@@ -172,7 +172,7 @@
             </div>
 
         </section>
-        <section class="projects sec">
+        <section class="projects sec" id="projects">
             <h2 class="sec-heading">Projects</h2>
             <div class="sec-layout">
                 <div class="project">
@@ -241,6 +241,19 @@
                 </div>
             </div>
         </section>
+        <section class="todo-list sec">
+            <h2 class="sec-heading">TODO List</h2>
+            <div class="sec-layout"
+                style="background-color:var(--bg-color); border-radius: 15px; height: max-content; width: auto; margin: auto;">
+                <ul style="display: flex; flex-direction: column; list-style: decimal-leading-zero;">
+                    <li>Adding achievements timeline</li>
+                    <li>Adding education timeline</li>
+                    <li>Adding other projects with links to source codes</li>
+                    <li>Animating the page more and more, and rechecking performance issues caused by various reasons
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="sections">
@@ -254,10 +267,13 @@
             <div class="useful-links section">
                 <h6>Useful Links</h6>
                 <ul>
-                    <li class="link-layout"><a href="#" class="link"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li class="link-layout"><a href="#" class="link"><i class="fa-solid fa-list-check"></i>Projects</a>
+                    <li class="link-layout"><a href="#interests" class="link"><i
+                                class="fa-solid fa-star"></i>Interests</a></li>
+                    <li class="link-layout"><a href="#tools" class="link"><i class="fa-solid fa-hammer"></i>Tools</a>
                     </li>
-                    <li class="link-layout"><a href="#" class="link"><i class="fa-solid fa-id-card"></i>Contact</a></li>
+                    <li class="link-layout"><a href="#projects" class="link"><i
+                                class="fa-solid fa-list-check"></i>Projects</a>
+                    </li>
                 </ul>
             </div>
             <div class="contact-info section">

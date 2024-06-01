@@ -35,11 +35,11 @@
 }
 
 
-/* Header Start */
-
-/* Header End */
 
 /* Global */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-image: var(--bg-url);
