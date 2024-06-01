@@ -5,6 +5,8 @@ main .projects {
 main .projects .sec-layout {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -38,7 +40,7 @@ main .projects .project {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin: 20px;
+    margin: 20px 0;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -61,7 +63,6 @@ main .projects .project-desc {
 main .projects img {
     width: 50px;
     height: 50px;
-    margin-left: 20px;
     border-radius: 50%;
 }
 
@@ -75,5 +76,7 @@ main .projects .project .text-content {
     main .projects .project {
         border-left: none;
         border-top: solid var(--text-color-2) 10px;
+        flex-direction: column;
     }
+
 }

@@ -27,8 +27,8 @@ main .tools .sec-layout {
 
 @media screen and (max-width: 750px) {
     main .tools img {
-        width: 90px;
-        height: 90px;
-        padding: 30px;
+        width: 60px;
+        height: 60px;
+        padding: 20px;
     }
 }
