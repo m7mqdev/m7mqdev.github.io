@@ -71,4 +71,9 @@ main .projects .project .text-content {
     gap: 20px 0;
 }
 
-@media screen and (max-width: 750px) {}
+@media screen and (max-width: 750px) {
+    main .projects .project {
+        border-left: none;
+        border-top: solid var(--text-color-2) 10px;
+    }
+}

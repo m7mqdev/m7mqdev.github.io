@@ -148,4 +148,17 @@ main .intro .p.about {
     .intro .text-content::before {
         display: none;
     }
+
+    main .intro .h1 {
+        font-size: 25px;
+    }
+
+    main .intro .h2 {
+        font-size: 20px;
+    }
+
+    main .intro .p.about {
+        font-size: 10px;
+    }
+
 }
