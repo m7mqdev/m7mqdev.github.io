@@ -1,0 +1,151 @@
+main .intro h1,
+main .intro h2 {
+    position: relative;
+    font-weight: bolder;
+}
+
+main .intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main .intro .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    padding: 20px;
+    position: relative;
+    gap: 10px;
+}
+
+main .intro .text-content::before {
+    content: "{";
+    position: absolute;
+    left: -10%;
+    transform: translate(-50%, -50%);
+    font-size: 25vw;
+    padding-right: 5px;
+    top: 45%;
+    color: var(--text-color-2);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    animation: move-left 1s cubic-bezier(0.12, 0.55, 0.18, 0.94) 1;
+}
+
+main .intro .text-content::after {
+    content: "}";
+    position: absolute;
+    right: -10%;
+    top: 45%;
+    color: var(--text-color-2);
+    transform: translate(50%, -50%);
+    font-size: 25vw;
+    padding-left: 5px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    animation: move-right 1s cubic-bezier(0.12, 0.55, 0.18, 0.94) 1;
+    font-style: normal;
+}
+
+@keyframes move-right {
+    0% {
+        opacity: 0;
+        transform: translate(200%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(50%, -50%);
+    }
+}
+
+@keyframes move-left {
+    0% {
+        opacity: 0;
+        transform: translate(-200%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+main .intro .h1,
+.h2,
+.p {
+
+    position: relative;
+    text-align: center;
+    animation-name: up-down;
+    animation-duration: 2s;
+}
+
+@keyframes up-down {
+    from {
+        bottom: 500px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+main .intro .h1 {
+    font-size: 40px;
+    color: var(--text-color-2);
+}
+
+main .intro .h2 {
+    font-size: 35px;
+    padding: 0 0 10px 0;
+    border-bottom: solid var(--text-color-2) 3px;
+}
+
+.typing-blinking-animation {
+    border-right: solid var(--primary-color) 3px;
+    animation:
+        blinking .8s infinite;
+}
+
+
+@keyframes blinking {
+
+    from,
+    to {
+        border-right-color: transparent;
+    }
+
+    50% {
+        border-right-color: var(--primary-color);
+    }
+}
+
+main .intro .p.about {
+    font-size: 20px;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+
+    .intro .text-content::after,
+    .intro .text-content::before {
+        display: none;
+    }
+}

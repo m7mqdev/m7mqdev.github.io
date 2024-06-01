@@ -1,0 +1,149 @@
+:root {
+    --bg-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1500' height='1000' preserveAspectRatio='none' viewBox='0 0 1500 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1776%26quot%3b)' fill='none'%3e%3crect width='1500' height='1000' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1777%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1500 0L1038.84 0L1500 424.3z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1038.84 0L1500 424.3L1500 603.4100000000001L813.9699999999999 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M813.97 0L1500 603.4100000000001L1500 751.33L352.15000000000003 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M352.1500000000001 0L1500 751.33L1500 909.35L233.8200000000001 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1000L559.72 1000L0 816.7z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 816.7L559.72 1000L842.9000000000001 1000L0 663.8800000000001z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 663.88L842.9000000000001 1000L1071.1200000000001 1000L0 595.77z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 595.77L1071.1200000000001 1000L1284.6000000000001 1000L0 372.96999999999997z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1776'%3e%3crect width='1500' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='91.67%25' y1='-12.5%25' x2='8.33%25' y2='112.5%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1777'%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='0.37'%3e%3c/stop%3e%3cstop stop-color='rgba(29%2c 27%2c 27%2c 1)' offset='0.99'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    --invert-logo-color: 0;
+    --bg-color: rgb(20, 20, 20);
+    --nav-color: rgb(12 12 12 / 63%);
+    --primary-color: rgb(89, 30, 128);
+    --secondary-color: rgba(91, 52, 128, 1);
+    --text-color: #fff;
+    --text-color-2: rgb(77, 50, 150);
+    --text-color-3: rgb(89, 50, 150);
+    --overlay-color: rgba(28, 28, 29, 0.644);
+}
+
+:root[theme="light"] {
+    --invert-logo-color: 1;
+    --bg-url: url("/assests/slanted-gradient.svg");
+    --bg-color: rgb(226, 222, 222);
+    --nav-color: rgba(216, 210, 210, 0.63);
+    --primary-color: rgb(89, 30, 128);
+    --secondary-color: rgba(91, 52, 128, 1);
+    --text-color: #000000;
+    --text-color-2: rgb(77, 50, 150);
+    --text-color-3: rgb(89, 50, 150);
+    --overlay-color: rgba(255, 255, 255, 0.644);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+
+/* Header Start */
+
+/* Header End */
+
+/* Global */
+
+body {
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+*::selection {
+    background-color: var(--primary-color);
+}
+
+/* Section Interface Start*/
+main .sec {
+    position: relative;
+    display: block;
+
+    width: 80%;
+    margin: 50px auto;
+    height: 700px;
+    border-radius: 50px;
+}
+
+main h2.sec-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+main .sec-layout {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    padding: 50px 0;
+}
+
+
+/* Section Interface End*/
+
+/*
+    If you have an ul -> li -> a, it's better to use linkLayout for the li, and link for the a
+*/
+
+.link {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-style: normal;
+    color: var(--text-color);
+    transition: 0.4s;
+    border-bottom: transparent 3px solid;
+}
+
+.link-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: calc(100%/3);
+}
+
+.link:hover {
+    color: var(--text-color-2);
+    border-bottom: var(--primary-color) 3px solid;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .link {
+        border-bottom: unset;
+    }
+
+
+    .link:hover {
+        color: var(--text-color-2);
+        border-bottom: unset;
+    }
+}
