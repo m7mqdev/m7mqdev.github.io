@@ -46,7 +46,7 @@ main .interests .interest-content img {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    border-radius: 30px;
+    border-radius: inherit;
     transition: 0.3s;
     opacity: 0.5;
 }
@@ -95,8 +95,12 @@ main .interests button.selected li {
         width: 100%;
     }
 
+    main .interests .interest-content {
+        border-radius: unset !important;
+    }
+
     main .interests {
-        width: 95% !important;
+        width: 100% !important;
     }
 
     main .interests button {

@@ -28,8 +28,7 @@ header img {
 }
 
 header img:hover {
-    transform: rotateY(360deg);
-    scale: 1.5;
+    transform: scale(1.3) rotateY(360deg);
 }
 
 header nav {
@@ -71,11 +70,12 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1) ease;
+    transition: 1s;
+    transform: none;
 }
 
 .theme:hover {
-    transform: scale(1.5);
+    transform: scale(1.3) rotate(360deg);
     color: var(--primary-color);
 }
 

@@ -31,4 +31,8 @@ main .tools .sec-layout {
         height: 60px;
         padding: 20px;
     }
+
+    main .tools.sec {
+        width: 90%;
+    }
 }

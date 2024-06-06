@@ -79,4 +79,8 @@ main .projects .project .text-content {
         flex-direction: column;
     }
 
+    main .projects.sec {
+        width: 90%;
+    }
+
 }
