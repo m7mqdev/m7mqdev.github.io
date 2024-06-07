@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", (ev) => {
 
     document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
+    const currentTheme = document.documentElement.getAttribute("theme");
     function updateThemeBtn() {
-        const currentTheme = document.documentElement.getAttribute("theme");
+        const icon = themeBtn.querySelector("i");
         if (currentTheme === "light") {
             icon.classList.remove("fa-moon");
             icon.classList.add("fa-sun");
@@ -15,9 +16,6 @@ document.addEventListener("DOMContentLoaded", (ev) => {
     }
     updateThemeBtn();
     themeBtn.addEventListener("click", () => {
-        const icon = themeBtn.querySelector("i");
-        const currentTheme = document.documentElement.getAttribute("theme");
-
         if (currentTheme === "light") {
             document.documentElement.removeAttribute("theme");
             storeTheme(null);
