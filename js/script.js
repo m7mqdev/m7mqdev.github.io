@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", (ev) => {
 
     document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
+    function updateThemeBtn() {
+        const currentTheme = document.documentElement.getAttribute("theme");
+        if (currentTheme === "light") {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+    }
+    updateThemeBtn();
     themeBtn.addEventListener("click", () => {
         const icon = themeBtn.querySelector("i");
         const currentTheme = document.documentElement.getAttribute("theme");
@@ -10,14 +21,11 @@ document.addEventListener("DOMContentLoaded", (ev) => {
         if (currentTheme === "light") {
             document.documentElement.removeAttribute("theme");
             storeTheme(null);
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
         } else {
             document.documentElement.setAttribute("theme", "light");
             storeTheme("light");
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
         }
+        updateThemeBtn();
     });
     interestContent = document.querySelector("main .interest-content");
     const buttons = document.querySelectorAll("main .interests-list button");
