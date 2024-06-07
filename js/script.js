@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", (ev) => {
     document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
     const currentTheme = document.documentElement.getAttribute("theme");
+    const themeIcon = themeBtn.querySelector("i");
     function updateThemeBtn() {
-        const icon = themeBtn.querySelector("i");
         if (currentTheme === "light") {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
         } else {
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
         }
     }
     updateThemeBtn();
