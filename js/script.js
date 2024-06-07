@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", (ev) => {
 
     document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
-    const currentTheme = document.documentElement.getAttribute("theme");
     const themeIcon = themeBtn.querySelector("i");
     function updateThemeBtn() {
+
+        const currentTheme = document.documentElement.getAttribute("theme");
         if (currentTheme === "light") {
             themeIcon.classList.remove("fa-moon");
             themeIcon.classList.add("fa-sun");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", (ev) => {
     }
     updateThemeBtn();
     themeBtn.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("theme");
         if (currentTheme === "light") {
             document.documentElement.removeAttribute("theme");
             storeTheme(null);
