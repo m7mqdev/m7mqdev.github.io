@@ -33,7 +33,6 @@ header img:hover {
 }
 
 header nav {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,14 +72,10 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s;
-    transform: none;
-}
-
-.theme:hover {
-    transform: scale(1.3) rotate(360deg);
+    gap: 0 5px;
     color: var(--primary-color);
 }
+
 
 
 /*
@@ -117,6 +112,16 @@ header nav ul {
     color: var(--text-color-2);
 }
 
+@keyframes stretch {
+    0% {
+        width: 1px;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
 @media screen and (max-width: 950px) {
 
     header .theme:hover,
@@ -129,22 +134,49 @@ header nav ul {
         border-bottom-right-radius: 0;
     }
 
+
     header nav .nav-btns.sticky {
+        overflow: hidden;
         position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         top: 100%;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        right: 0;
+        animation: stretch 0.2s forwards ease-in-out;
+        height: 200px;
+        padding: 0 0 10px;
+        border-bottom-left-radius: 5px;
         background-color: var(--bg-color);
     }
 
+    header nav .nav-btns.sticky li {
+        width: 100%;
+    }
+
+    header nav .nav-btns.sticky li:hover {
+        background-color: var(--overlay-color);
+    }
+
+    header nav .nav-btns.sticky i {
+        width: 10px;
+    }
+
+    header nav .nav-btns.sticky .theme {
+        padding: 10px;
+        width: 100%;
+    }
+
+    header nav .nav-btns.sticky .theme:hover {
+        background-color: var(--overlay-color);
+    }
 
     header nav ul {
         display: flex;
         height: 100%;
         width: 100%;
+        padding: 10px 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -160,7 +192,61 @@ header nav ul {
 
     header .bars:hover {
         color: var(--primary-color);
-        transform: rotate(360deg);
 
     }
 }
+
+
+/* DARK MODE SWITCH START*/
+.switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: var(--overlay-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--text-color-2);
+    content: attr(data-on);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(text-color-2);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+}
+
+/* DARK MODE SWITCH END*/

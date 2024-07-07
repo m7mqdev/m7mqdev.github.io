@@ -1,4 +1,4 @@
-:root {
+:root[theme="dark"] {
     --bg-url: url("../assets/slanted-gradient-dark.svg");
     --invert-logo-color: 0;
     --bg-color: rgb(20, 20, 20);

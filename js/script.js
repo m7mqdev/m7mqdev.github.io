@@ -8,31 +8,34 @@ document.addEventListener("DOMContentLoaded", (ev) => {
     function getTheme() {
         return localStorage.getItem('theme');
     }
-    document.documentElement.setAttribute("theme", getTheme());
+    var firstLoadTheme = getTheme();
+    if (firstLoadTheme === "dark") {
+        document.documentElement.setAttribute("theme", firstLoadTheme);
+    }
     const themeBtn = document.querySelector(".theme");
     const themeIcon = themeBtn.querySelector("i");
+    var themeCheckBoxLabel = document.querySelector(".theme .switch");
+    var themeCheckBox = document.querySelector(".theme .switch #checkboxinp");
     function updateThemeBtn() {
-
-        const currentTheme = document.documentElement.getAttribute("theme");
-        if (currentTheme === "light") {
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-        } else {
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-        }
+        themeCheckBox.checked = getTheme() === "dark";
     }
     updateThemeBtn();
-    themeBtn.addEventListener("click", () => {
+    function changeTheme() {
         const currentTheme = document.documentElement.getAttribute("theme");
         if (currentTheme === "light") {
-            document.documentElement.removeAttribute("theme");
-            storeTheme(null);
+            document.documentElement.setAttribute("theme", "dark");
+            storeTheme("dark");
         } else {
             document.documentElement.setAttribute("theme", "light");
-            storeTheme("light");
+            storeTheme(null);
         }
+    }
+    themeIcon.addEventListener("click", () => {
+        changeTheme();
         updateThemeBtn();
+    });
+    themeCheckBox.addEventListener("change", () => {
+        changeTheme();
     });
     /* THEME CHANGING END*/
     const btnsContainer = document.querySelector("header .nav-btns"); // nav buttons
