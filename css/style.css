@@ -2,12 +2,12 @@
     --bg-url: url("../assets/slanted-gradient-dark.svg");
     --invert-logo-color: 0;
     --bg-color: rgb(20, 20, 20);
-    --nav-color: rgb(12 12 12 / 63%);
-    --primary-color: rgb(89, 30, 128);
-    --secondary-color: rgba(91, 52, 128, 1);
+    --nav-color: rgb(30 30 30 / 63%);
+    --primary-color: rgb(15, 90, 161);
+    --secondary-color: rgb(58, 125, 188);
     --text-color: #fff;
-    --text-color-2: rgb(77, 50, 150);
-    --text-color-3: rgb(89, 50, 150);
+    --text-color-2: rgb(15, 90, 161);
+    --text-color-3: rgb(58, 125, 188);
     --overlay-color: rgba(28, 28, 29, 0.644);
 }
 
@@ -16,11 +16,11 @@
     --bg-url: url("../assets/slanted-gradient.svg");
     --bg-color: rgb(226, 222, 222);
     --nav-color: rgba(216, 210, 210, 0.63);
-    --primary-color: rgb(89, 30, 128);
-    --secondary-color: rgba(91, 52, 128, 1);
+    --primary-color: rgb(15, 90, 161);
+    --secondary-color: rgb(58, 125, 188);
     --text-color: #000000;
-    --text-color-2: rgb(77, 50, 150);
-    --text-color-3: rgb(89, 50, 150);
+    --text-color-2: rgb(15, 90, 161);
+    --text-color-3: rgb(58, 125, 188);
     --overlay-color: rgba(255, 255, 255, 0.644);
 }
 
@@ -73,7 +73,6 @@ body {
 main .sec {
     position: relative;
     display: block;
-
     width: 80%;
     margin: 50px auto;
     height: 700px;
@@ -99,54 +98,3 @@ main .sec-layout {
 
 
 /* Section Interface End*/
-
-/*
-    If you have an ul -> li -> a, it's better to use linkLayout for the li, and link for the a
-*/
-
-.link {
-    display: flex;
-    justify-content: center;
-    gap: 0 10px;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    text-decoration-line: none;
-    font-style: normal;
-    color: var(--text-color);
-    transition: 0.4s;
-    border-bottom: transparent 3px solid;
-}
-
-.link-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    height: 100%;
-    width: calc(100%/3);
-}
-
-.link:hover {
-    color: var(--text-color-2);
-    border-bottom: var(--primary-color) 3px solid;
-}
-
-.link:hover i {
-    color: var(--text-color-2);
-}
-
-@media screen and (max-width: 1150px) {
-    .link {
-        border-bottom: unset;
-    }
-
-
-    .link:hover {
-        color: var(--text-color-2);
-        border-bottom: unset;
-    }
-}

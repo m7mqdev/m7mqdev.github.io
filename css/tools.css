@@ -1,6 +1,6 @@
 main .tools.sec {
     height: max-content;
-    width: 60%;
+    width: 40%;
 }
 
 main .tools .sec-heading {
@@ -9,9 +9,9 @@ main .tools .sec-heading {
 
 main .tools img {
     position: relative;
-    width: 150px;
-    height: 150px;
-    padding: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
 }
 
 main .tools img:hover {
@@ -24,6 +24,7 @@ main .tools .sec-layout {
     box-shadow: 0 0 15px 1px black;
     border-radius: 30px;
 }
+
 
 @media screen and (max-width: 750px) {
     main .tools img {

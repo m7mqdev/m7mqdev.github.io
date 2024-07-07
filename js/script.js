@@ -1,6 +1,13 @@
-let interestContent;
 document.addEventListener("DOMContentLoaded", (ev) => {
 
+    /* THEME CHANGING START */
+    function storeTheme(theme) {
+        localStorage.setItem('theme', theme);
+    }
+
+    function getTheme() {
+        return localStorage.getItem('theme');
+    }
     document.documentElement.setAttribute("theme", getTheme());
     const themeBtn = document.querySelector(".theme");
     const themeIcon = themeBtn.querySelector("i");
@@ -27,31 +34,34 @@ document.addEventListener("DOMContentLoaded", (ev) => {
         }
         updateThemeBtn();
     });
-    interestContent = document.querySelector("main .interest-content");
-    const buttons = document.querySelectorAll("main .interests-list button");
-    setTimeout(() => {
-        const majorHeader = document.querySelector("main .intro .h2");
-        majorHeader.classList.add("typing-blinking-animation");
-        typeWriterLoop(majorHeader, 100, 2);
-    }, 2050);
-    // Loop through each button and attach the onclick event
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            changeHobby(button);
-        });
-    })
+    /* THEME CHANGING END*/
     const btnsContainer = document.querySelector("header .nav-btns"); // nav buttons
     if (window.innerWidth <= 950) {
         btnsContainer.classList.remove("visible");
         btnsContainer.classList.add("sticky");
     }
-    document.querySelector("header nav .bars").addEventListener("click", () => {
+    const barsButton = document.querySelector("header nav .bars");
+    barsButton.addEventListener("click", () => {
         if (btnsContainer.classList.contains("visible")) {
             btnsContainer.classList.remove("visible");
             return;
         }
         btnsContainer.classList.add("visible");
     });
+    document.addEventListener('click', function (event) {
+        const isBarsButtonVisible = barsButton.style.display !== 'none' && barsButton.style.visibility !== 'hidden' && btnsContainer.classList.contains("sticky");
+        if (!isBarsButtonVisible) return;
+        const isClickInside = barsButton.contains(event.target) || btnsContainer.contains(event.target);
+        if (!isClickInside) {
+            btnsContainer.classList.remove('visible');
+        }
+    });
+    /* Nav 3 bars button, as well as the nav bar handling being sticky or absolute based on  */
+    setTimeout(() => {
+        const majorHeader = document.querySelector("main .intro .h2");
+        majorHeader.classList.add("typing-blinking-animation");
+        typeWriterLoop(majorHeader, 100, 2);
+    }, 2050);
     btnsContainer.querySelectorAll("a").forEach((btn) => {
         btn.addEventListener("click", () => {
             if (window.innerWidth <= 950) {
@@ -69,13 +79,6 @@ document.addEventListener("DOMContentLoaded", (ev) => {
         }
     });
 });
-function storeTheme(theme) {
-    localStorage.setItem('theme', theme);
-}
-
-function getTheme() {
-    return localStorage.getItem('theme');
-}
 function typeWriterLoop(textElement, speed, maximumTimes) {
     const text = textElement.textContent.trim(); // Get the existing text content
     let reverse = true;
@@ -108,59 +111,4 @@ function typeWriterLoop(textElement, speed, maximumTimes) {
             }
         }
     }, speed);
-}
-function changeHobby(button) {
-    if (button == null) {
-        return;
-    }
-    if (button instanceof HTMLButtonElement) {
-        if (button.classList == null || button.classList.contains("selected")) {
-            return;
-        }
-        const bg = button.dataset.bg;
-        const desc = button.dataset.desc;
-        const title = button.dataset.title;
-        const filter = button.dataset.filter;
-        const selectedBtn = document.querySelector(".interests-list .selected");
-        selectedBtn.classList.remove("selected");
-        button.classList.add("selected");
-        if (interestContent == null) {
-            return;
-        }
-        const textContent = interestContent.querySelector(".text-content");
-        const image = interestContent.querySelector("img");
-
-        textContent.querySelector("h3").textContent = title;
-        textContent.querySelector("p").textContent = desc;
-
-        image.style.transform = 'translateX(-100%)';
-        const opacityBefore = image.style.opacity;
-        image.style.opacity = '0';
-
-        // Remove transition temporarily
-
-
-        // Load the new image source
-        setTimeout(() => {
-            image.style.transition = 'unset';
-            const lastFilter = selectedBtn.dataset.filter;
-            if (lastFilter != null) {
-                image.classList.remove(selectedBtn.dataset.filter);
-            }
-            if (filter != null) {
-                image.classList.add(filter);
-            }
-            image.src = bg;
-            image.style.opacity = opacityBefore;
-            image.style.transform = 'translateX(100%)';
-            // Slide in the new image from the right after a short delay
-            setTimeout(() => {
-                image.style.transition = '0.3s';
-                image.offsetHeight;
-                image.style.transform = 'translateX(0)';
-            }, 20);
-        }, 300);
-
-
-    }
 }

@@ -1,5 +1,5 @@
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 15;
     width: 100%;
@@ -9,6 +9,7 @@ header {
     border-bottom-right-radius: 30px;
     font-weight: bold;
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.384);
 }
 
 header .bars {
@@ -49,14 +50,16 @@ header nav .nav-btns {
     display: none;
     position: relative;
     z-index: 1;
+    font-size: 0.9em;
     width: 50%;
-    height: 100%;
+    height: max-content;
 }
 
 header nav ul {
     position: relative;
     display: flex;
     margin: auto;
+
     width: 100%;
     height: 100%;
 }
@@ -80,7 +83,52 @@ header nav ul {
 }
 
 
+/*
+    If you have an ul -> li -> a, it's better to use linkLayout for the li, and link for the a
+*/
+
+.link {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+
+.link-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: calc(100%/3);
+}
+
+
+.link:hover {
+    color: var(--text-color-2);
+}
+
 @media screen and (max-width: 950px) {
+
+    header .theme:hover,
+    header img:hover {
+        transform: none;
+    }
+
+    header {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
     header nav .nav-btns.sticky {
         position: absolute;
         top: 100%;

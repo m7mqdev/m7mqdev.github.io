@@ -55,6 +55,11 @@ main .projects .project {
 
 }
 
+main .projects .project-heading {
+    color: var(--text-color-2);
+    font-weight: bolder;
+}
+
 main .projects .project-desc {
     font-size: 15px;
     text-align: left;

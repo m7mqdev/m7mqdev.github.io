@@ -1,129 +1,20 @@
 footer {
-    position: relative;
-    background-color: var(--bg-color);
-    font-style: normal;
-}
-
-footer .sections {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-
-footer .section {
+    width: 100%;
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-items: center;
     justify-content: center;
-    padding: 20px 0;
-    height: 100%;
-}
-
-footer .link-layout {
-    flex-direction: column;
-    align-items: flex-start;
-    width: max-content;
-    height: max-content;
-}
-
-
-footer .link {
-    position: relative;
-    padding: 10px 0 0 0;
-}
-
-footer h6 {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: bold;
-}
-
-
-footer .about-me {
-    text-align: center;
-}
-
-footer .about-me p span {
-    display: block;
-    color: var(--text-color-3);
-}
-
-footer .about-me img {
-    height: auto;
-    width: 50px;
-    padding-bottom: 10px;
-    filter: invert(var(--invert-logo-color));
-}
-
-footer .about-me p {
-    width: 80%;
-    font-size: 15px;
-}
-
-footer a.link {
-    position: relative;
-    border-bottom: none;
-    width: max-content;
-}
-
-footer a.link:hover {
-    border-bottom: none;
-
-}
-
-footer .contact-info ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 footer .copyright {
-    display: block;
+
+    align-items: center;
+    flex-direction: column;
     border-top: var(--primary-color) solid 1px;
-    border-width: 50%;
+    font-size: 0.9em;
+    width: 80%;
     clear: left;
-    width: 100%;
     position: relative;
     text-align: center;
-    padding: 20px 0;
-}
-
-footer .section:last-child {
-    padding-right: 25px;
-}
-
-footer .section:first-child {
-    padding-left: 25px;
-}
-
-@media screen and (max-width: 1200px) {
-    footer .section {
-        width: 50%;
-    }
-
-    footer .section:last-child {
-        padding-right: 0;
-    }
-
-    footer .section:first-child {
-        padding-left: 0;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    footer .section {
-        width: 100%;
-    }
-
-    footer .section:last-child {
-        padding-right: 0;
-    }
-
-    footer .section:first-child {
-        padding-left: 0;
-    }
+    padding: 10px 0 3px 0;
 }

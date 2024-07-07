@@ -1,7 +1,6 @@
 main .todo-list {
     background-color: var(--bg-color);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px;
     padding: 30px;
     height: max-content;
 }
