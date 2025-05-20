@@ -1,0 +1,162 @@
+{
+  "about_me": "Passionate <span style=\"color: orange; font-weight: bold\">Java</span> developer with 3+ years of professional experience in OOP, concurrency, and clean architecture, skilled in both <a href=\"https://en.wikipedia.org/wiki/Relational_database\" target=\"_blank\" style=\"color: #1e90ff\">relational</a> and <a href=\"https://en.wikipedia.org/wiki/NoSQL\" target=\"_blank\" style=\"color: #1e90ff\">non-relational</a> databases. Focused on building modular, efficient, and maintainable software — also a software engineering student and competitive programming enthusiast.",
+  "social_media_icons": [
+    {
+      "click_link": "https://discord.gg/vDK5GjaVvh",
+      "link": "assets/social_media_icons/discord.png",
+      "alt": "Discord Img"
+    },
+    {
+      "click_link": "https://github.com/m7mqdev",
+      "link": "assets/social_media_icons/github.png",
+      "alt": "Github Img"
+    }
+  ],
+  "tools_icons": [
+    {
+      "click_link": "https://www.java.com/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      "alt": "Java"
+    },
+    {
+      "click_link": "https://www.jetbrains.com/idea/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg",
+      "alt": "IntelliJ IDEA"
+    },
+    {
+      "click_link": "https://www.hibernate.org/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-plain-wordmark.svg",
+      "alt": "Hibernate"
+    },
+    {
+      "click_link": "https://www.mongodb.com/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+      "alt": "MongoDB"
+    },
+    {
+      "click_link": "https://www.mysql.com/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
+      "alt": "MySQL"
+    },
+    {
+      "click_link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "alt": "HTML5"
+    },
+    {
+      "click_link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "alt": "CSS3"
+    },
+    {
+      "click_link": "https://spring.io/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg",
+      "alt": "Spring"
+    },
+    {
+      "click_link": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+      "alt": "C#"
+    },
+    {
+      "click_link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      "alt": "JavaScript"
+    },
+    {
+      "click_link": "https://git-scm.com/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg",
+      "alt": "Git"
+    },
+    {
+      "click_link": "https://mariadb.org/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original-wordmark.svg",
+      "alt": "MariaDB"
+    },
+    {
+      "click_link": "https://code.visualstudio.com/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+      "alt": "Visual Studio Code"
+    },
+    {
+      "click_link": "https://gradle.org/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original-wordmark.svg",
+      "alt": "Gradle"
+    },
+    {
+      "click_link": "https://maven.apache.org/",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg",
+      "alt": "Maven"
+    }
+  ],
+  "projects": [
+    {
+      "title": "PVP",
+      "image": "assets/projects/pvp.png",
+      "description": "A modular and feature-rich PvP system designed for Minecraft 1.8.9 servers. The plugin includes customizable Perks, visual Trails, and collectible Cries, along with a dynamic Layout Editor for personalized UI configurations. It tracks detailed player statistics with Top Rankings for kills, deaths, and more. Competitive elements include Runes for passive abilities, Guilds with territory Claiming, and seasonal Leagues to encourage long-term player engagement.",
+      "gallery": [
+        "assets/projects/menu1.png",
+        "assets/projects/top1.png",
+        "assets/projects/chat1.png",
+        "assets/projects/menu2.png",
+        "assets/projects/menu3.png"
+      ],
+      "date": "Jan 2025"
+    },
+    {
+      "title": "Quests",
+      "image": "assets/projects/pvp.png",
+      "description": "An engaging quest module tailored for PvP gameplay, featuring both Daily and Weekly Quests to drive consistent player activity. Quests are dynamically generated to match PvP scenarios—such as kill counts, win streaks, or guild interactions—and reward players with Coins, Cosmetics, and other Progression Unlocks. This system encourages short- and long-term participation, boosting retention and competitiveness across the server.",
+      "gallery": ["assets/projects/menu4.png", "assets/projects/menu5.png"],
+      "date": "Jan 2025"
+    },
+    {
+      "title": "AntiCrashPlus",
+      "image": "https://www.spigotmc.org/data/resource_icons/90/90749.jpg?1617140653",
+      "description": "AntiCrashPlus is a lightweight protection plugin for legacy Minecraft servers (1.8–1.12.2) that blocks common crash exploits and filters console spam. <br>It includes packet limiters, book crash fixes, and customizable messages for better server stability.",
+      "gallery": ["assets/projects/acp_config.png"],
+      "link": "https://www.spigotmc.org/resources/anticrashplus.90749/",
+      "date": "Mar 2021 - Dec 2022"
+    }
+  ],
+  "education": [
+    {
+      "title": "Software Engineering - Amman Arab University - Jordan",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcagSwm8ONHCer3RhJ4xePGi2xPfdBoPttg&s",
+      "description": "As of the date of writing, I have successfully completed two years of study in Software Engineering at Amman Arab University (AAU), maintaining a cumulative GPA of 4.00/4.00 over four consecutive semesters.",
+      "gallery": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3kjLfEdtZyQqv_a4hlB4bbTL0YQ2lsVlgQPJhtR0B_oD54oLkmHjFR5Jwtuk9XjA71s&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiKzV_H2CdlZp8gxVbx28YezTctebY5SBTQ&s",
+        "https://media.licdn.com/dms/image/v2/C561BAQHzyjFq2udjgg/company-background_10000/company-background_10000/0/1642321066840/amman_arab_university_cover?e=2147483647&v=beta&t=92GRF3Ue0rqgg-qUSW9kHA7yeSW9OaOL7qfTRagtpJs"
+      ],
+      "link": "https://aau.edu.jo",
+      "date": "Feb 2023 - Present"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "#1 AAUPC - Amman Arab University - Jordan",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcagSwm8ONHCer3RhJ4xePGi2xPfdBoPttg&s",
+      "description": "Achieved 1st place among 150 participants in the AAUPC competitive programming contest at Amman Arab University by solving 8 out of 11 algorithmic challenges, demonstrating strong problem-solving skills, teamwork, and time efficiency.",
+      "gallery": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3kjLfEdtZyQqv_a4hlB4bbTL0YQ2lsVlgQPJhtR0B_oD54oLkmHjFR5Jwtuk9XjA71s&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiKzV_H2CdlZp8gxVbx28YezTctebY5SBTQ&s",
+        "https://media.licdn.com/dms/image/v2/C561BAQHzyjFq2udjgg/company-background_10000/company-background_10000/0/1642321066840/amman_arab_university_cover?e=2147483647&v=beta&t=92GRF3Ue0rqgg-qUSW9kHA7yeSW9OaOL7qfTRagtpJs"
+      ],
+      "link": "https://aau.edu.jo",
+      "date": "May 2024"
+    },
+    {
+      "title": "#3 AAUPC - Amman Arab University - Jordan",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcagSwm8ONHCer3RhJ4xePGi2xPfdBoPttg&s",
+      "description": "Achieved 3rd place among 150 participants in the AAUPC competitive programming contest at Amman Arab University by solving 3 (For context, 1st team solved 4) out of 11 algorithmic challenges, demonstrating strong problem-solving skills, teamwork, and time efficiency.",
+      "gallery": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3kjLfEdtZyQqv_a4hlB4bbTL0YQ2lsVlgQPJhtR0B_oD54oLkmHjFR5Jwtuk9XjA71s&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiKzV_H2CdlZp8gxVbx28YezTctebY5SBTQ&s",
+        "https://media.licdn.com/dms/image/v2/C561BAQHzyjFq2udjgg/company-background_10000/company-background_10000/0/1642321066840/amman_arab_university_cover?e=2147483647&v=beta&t=92GRF3Ue0rqgg-qUSW9kHA7yeSW9OaOL7qfTRagtpJs"
+      ],
+      "link": "https://aau.edu.jo",
+      "date": "May 2023"
+    }
+  ]
+}

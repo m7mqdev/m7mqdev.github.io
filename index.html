@@ -1,192 +1,128 @@
 <!DOCTYPE html>
 <html lang="en" theme="light">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Muhammad | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/logo.svg">
-    <meta name="description" content="Muhammad H. Almansour's Portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/logo.svg" />
+    <meta name="description" content="Muhammad H. Almansour's Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts Start -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css?family=JetBrains Mono"
+      rel="stylesheet"
+    />
     <!-- Fonts End -->
 
     <!-- Scripts Start -->
     <script src="js/script.js"></script>
+    <script src="js/data-fetch.js"></script>
     <!-- Scripts End -->
 
     <!-- Styling Start -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/intro.css">
-    <link rel="stylesheet" href="css/tools.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/todo-list.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/timeline.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Styling End -->
+    <!-- Icons Kit -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Icons Kit End -->
+  </head>
 
-    <!-- Icons Repositories Start -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <!-- Icons Repositories End -->
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <img src="assets/logo.svg" alt="Logo">
-            <i class="fa-solid fa-bars bars"></i>
-            <div class="nav-btns visible">
-                <ul>
-                    <li class="link-layout"><a href="#intro" class="link">Home</a></li>
-                    <li class="link-layout"><a href="#tools" class="link">Tools</a></li>
-                    <li class="link-layout"><a href="#projects" class="link">Projects</a></li>
-                </ul>
-                <div class="theme">
-                    <i class="fa-solid fa-moon theme-icon"></i>
-                    <label class="switch">
-                        <input id="checkboxinp" type="checkbox">
-                        <div class="slider"></div>
-                    </label>
-                </div>
-            </div>
-
-        </nav>
+      <nav>
+        <img src="assets/logo.svg" alt="Logo" />
+        <i class="fa-solid fa-bars bars"></i>
+        <div class="nav-btns visible">
+          <ul>
+            <li class="link-layout"><a href="#intro" class="link">Home</a></li>
+            <li class="link-layout">
+              <a href="#projects" class="link">Projects</a>
+            </li>
+            <li class="link-layout">
+              <a href="#education" class="link">Education</a>
+            </li>
+            <li class="link-layout">
+              <a href="#achievements" class="link">Achievements</a>
+            </li>
+          </ul>
+          <div class="theme">
+            <i class="fa-solid fa-moon theme-icon"></i>
+            <label class="switch">
+              <input id="checkboxinp" type="checkbox" />
+              <div class="slider"></div>
+            </label>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="intro" id="intro">
-            <div class="wrapper">
-                <div class="text-content">
-                    <div class="h1 up-down-animation">Mohammed Almansour</div>
-                    <div class="h2 up-down-animation">Software Engineer</div>
-                    <div class="p about up-down-animation">Skilled in <a href="https://www.oracle.com/jo/java/"
-                            class="java" target="_blank">Java <i
-                                class="fa-solid fa-up-right-from-square external-link-icon"></i></a>
-                        with a
-                        portfolio of
-                        diverse projects,<br>
-                        currently advancing knowledge in <a href="https://spring.io" target="_blank"
-                            class="spring">Spring <i
-                                class="fa-solid fa-up-right-from-square external-link-icon"></i></a> and
-                        delving<br> deeper into
-                        backend development.
-                        Passionate about<br> programming and actively seeking opportunities<br> in backend development.
-                    </div>
-                    <div class="social-media-icons up-down-animation">
-                        <a href="#" target="_blank" aria-label="Visit my LinkedIn profile"><img
-                                src="assets/social_media_icons/linkedin.png" alt="LinkedIn Img"></a>
-                        <!-- <a href="https://twitter.com/yourprofile" target="_blank"><i
-                                class="fa-brands fa-discord"></i></a> -->
-                        <a href="https://github.com/m7mqdev" target="_blank" aria-label="Visit my GitHub profile"><img
-                                src="assets/social_media_icons/github.png" alt="Github Img"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="projects sec" id="projects">
-            <h2 class="sec-heading">Projects</h2>
-            <div class="sec-layout">
-                <div class="project">
+      <section class="intro" id="intro">
+        <div class="wrapper">
+          <div class="text-content">
+            <div class="h1">~/root: m7mqd.dev</div>
+            <div class="h2">Software Engineering Student</div>
+            <div class="p about"></div>
 
-                    <img src="assets/projects/codenames.webp" alt="Codenames Logo" class="project-icon">
-                    <div class="text-content">
-                        <h3 class="project-heading">Lorem Ipsum</h3>
-                        <p class="project-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-                            consectetur, placeat sit ut voluptates asperiores porro totam magni. Et ab impedit,
-                            architecto ut distinctio quas eaque animi fugiat laboriosam! Quam!</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="todo-list sec">
-            <h2 class="sec-heading">TODO List</h2>
-            <div class="sec-layout">
-                <ul>
-                    <li>Adding achievements timeline</li>
-                    <li>Adding education timeline</li>
-                    <li>Adding other projects with links to source codes</li>
-                </ul>
-            </div>
-        </section>
-        <section class="tools sec" id="tools">
-            <h2 class="sec-heading">Tools</h2>
-            <div class="sec-layout">
-                <a href="https://www.java.com/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                        alt="Java" />
-                </a>
-                <a href="https://www.jetbrains.com/idea/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"
-                        alt="IntelliJ IDEA" />
-                </a>
-                <a href="https://www.mongodb.com/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
-                        alt="MongoDB" />
-                </a>
-                <a href="https://www.mysql.com/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-                        alt="MySQL" />
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
-                        alt="HTML5" />
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
-                        alt="CSS3" />
-                </a>
-                <a href="https://spring.io/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg"
-                        alt="Spring" />
-                </a>
-                <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-                        alt="C#" />
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                        alt="JavaScript" />
-                </a>
-                <a href="https://git-scm.com/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"
-                        alt="Git" />
-                </a>
-                <a href="https://mariadb.org/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original-wordmark.svg"
-                        alt="MariaDB" />
-                </a>
-                <a href="https://code.visualstudio.com/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
-                        alt="Visual Studio Code" />
-                </a>
-                <a href="https://gradle.org/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original-wordmark.svg"
-                        alt="Gradle" />
-                </a>
-                <a href="https://maven.apache.org/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg"
-                        alt="Maven" />
-                </a>
+            <div class="icons-container social-icons">
+              <div class="h3">Social Links</div>
             </div>
 
-        </section>
-
+            <div class="icons-container tools-icons">
+              <div class="h3">Tools</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="timeline-cards" id="projects">
+        <div class="container">
+          <h1 class="timeline-header h1">~/root: m7mqd.dev --projects</h1>
+          <div class="timeline" id="projects-timeline"></div>
+        </div>
+      </section>
+      <section class="timeline-cards" id="education">
+        <div class="container">
+          <h1 class="timeline-header h1">~/root: m7mqd.dev --education</h1>
+          <div class="timeline"></div>
+        </div>
+      </section>
+      <section class="timeline-cards" id="achievements">
+        <div class="container">
+          <h1 class="timeline-header h1">~/root: m7mqd.dev --achievements</h1>
+          <div class="timeline"></div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="copyright">
-            <p>Copyright 2024-2025 &copy;M7mqD</p>
-            <p>All rights Reserved</p>
-        </div>
+      <div class="copyright">
+        <p>Copyright 2024-2025 &copy;M7mqD</p>
+        <p>
+          This portfolio is open-source and free to use, with credit required.
+        </p>
+      </div>
     </footer>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
 </html>

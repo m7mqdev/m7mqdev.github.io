@@ -1,252 +1,242 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 15;
-    width: 100%;
-    height: 80px;
-    background-color: var(--nav-color);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    font-weight: bold;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.384);
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  width: 100%;
+  height: 80px;
+  background-color: var(--nav-color);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.384);
 }
 
 header .bars {
-    display: none;
-    transition: none;
+  display: none;
+  transition: none;
 }
 
 header img {
-    position: relative;
-    padding: 7px 15px;
-    width: 80px;
-    height: 64px;
-    margin: auto 0;
-    z-index: 1;
-    transition: 1s;
-    filter: invert(var(--invert-logo-color));
+  position: relative;
+  padding: 7px 15px;
+  width: 80px;
+  height: 64px;
+  margin: auto 0;
+  z-index: 1;
+  transition: 1s;
+  filter: invert(var(--invert-logo-color));
 }
 
 header img:hover {
-    transform: scale(1.3) rotateY(360deg);
+  transform: scale(1.3) rotateY(360deg);
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100%;
-    width: 80%;
-    margin: auto;
-
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 header nav .nav-btns {
-    display: none;
-    position: relative;
-    z-index: 1;
-    font-size: 0.9em;
-    width: 50%;
-    height: max-content;
+  display: none;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9em;
+  width: 70%;
+  height: max-content;
 }
 
 header nav ul {
-    position: relative;
-    display: flex;
-    margin: auto;
+  position: relative;
+  display: flex;
+  margin: auto;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .visible {
-    display: flex !important;
+  display: flex !important;
 }
 
 .theme {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0 5px;
-    color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5px;
+  color: var(--primary-color);
 }
-
-
 
 /*
     If you have an ul -> li -> a, it's better to use linkLayout for the li, and link for the a
 */
 
 .link {
-    display: flex;
-    justify-content: center;
-    gap: 0 10px;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    text-decoration-line: none;
-    font-style: normal;
-    color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-decoration-line: none;
+  font-style: normal;
+  color: var(--text-color);
 }
-
 
 .link-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    height: 100%;
-    width: calc(100%/3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  width: calc(100% / 3);
 }
 
-
 .link:hover {
-    color: var(--text-color-2);
+  color: var(--text-color-2);
 }
 
 @keyframes stretch {
-    0% {
-        width: 1px;
-    }
+  0% {
+    width: 1px;
+  }
 
-    100% {
-        width: 300px;
-    }
+  100% {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 950px) {
+  header .theme:hover,
+  header img:hover {
+    transform: none;
+  }
 
-    header .theme:hover,
-    header img:hover {
-        transform: none;
-    }
+  header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-    header {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+  header nav .nav-btns.sticky {
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+    right: 0;
+    animation: stretch 0.2s forwards ease-in-out;
+    height: 200px;
+    padding: 0 0 10px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--bg-color);
+  }
 
+  header nav .nav-btns.sticky li {
+    width: 100%;
+  }
 
-    header nav .nav-btns.sticky {
-        overflow: hidden;
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        top: 100%;
-        right: 0;
-        animation: stretch 0.2s forwards ease-in-out;
-        height: 200px;
-        padding: 0 0 10px;
-        border-bottom-left-radius: 5px;
-        background-color: var(--bg-color);
-    }
+  header nav .nav-btns.sticky li:hover {
+    background-color: var(--overlay-color);
+  }
 
-    header nav .nav-btns.sticky li {
-        width: 100%;
-    }
+  header nav .nav-btns.sticky i {
+    width: 10px;
+  }
 
-    header nav .nav-btns.sticky li:hover {
-        background-color: var(--overlay-color);
-    }
+  header nav .nav-btns.sticky .theme {
+    padding: 10px;
+    width: 100%;
+  }
 
-    header nav .nav-btns.sticky i {
-        width: 10px;
-    }
+  header nav .nav-btns.sticky .theme:hover {
+    background-color: var(--overlay-color);
+  }
 
-    header nav .nav-btns.sticky .theme {
-        padding: 10px;
-        width: 100%;
-    }
+  header nav ul {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    header nav .nav-btns.sticky .theme:hover {
-        background-color: var(--overlay-color);
-    }
+  header .bars {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+  }
 
-    header nav ul {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        padding: 10px 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header .bars {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 1s;
-    }
-
-    header .bars:hover {
-        color: var(--primary-color);
-
-    }
+  header .bars:hover {
+    color: var(--primary-color);
+  }
 }
-
 
 /* DARK MODE SWITCH START*/
 .switch {
-    position: relative;
-    width: 40px;
-    height: 20px;
+  position: relative;
+  width: 40px;
+  height: 20px;
 }
 
 .switch input {
-    display: none;
+  display: none;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 34px;
-    background-color: var(--overlay-color);
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: var(--overlay-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 17px;
-    width: 17px;
-    left: 4px;
-    bottom: 2px;
-    border-radius: 50%;
-    background-color: var(--text-color);
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
-    background-color: var(--text-color-2);
-    content: attr(data-on);
+input:checked + .slider {
+  background-color: var(--text-color-2);
+  content: attr(data-on);
 }
 
-input:focus+.slider {
-    box-shadow: 0 0 1px var(text-color-2);
+input:focus + .slider {
+  box-shadow: 0 0 1px var(text-color-2);
 }
 
-input:checked+.slider:before {
-    -webkit-transform: translateX(17px);
-    -ms-transform: translateX(17px);
-    transform: translateX(17px);
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
 }
 
 /* DARK MODE SWITCH END*/

@@ -1,0 +1,240 @@
+.container {
+  max-width: 100%;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25px;
+  width: 4px;
+  top: 0;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.timeline-card {
+  position: relative;
+  margin-bottom: 40px;
+  background: linear-gradient(45deg, var(--secondary-color) -200%, transparent);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Connector line from timeline to card title */
+.timeline-card::after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: -26px;
+  width: 20px;
+  height: 2px;
+  background: var(--text-color);
+  z-index: 1;
+}
+
+/* Timeline dots */
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: -31px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  border: 3px solid var(--bg-color);
+  z-index: 2;
+}
+
+.timeline-card-header {
+  padding: 25px;
+  margin: 0 0 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-card-title-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timeline-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Colored accent bar next to title */
+.timeline-card-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  border-radius: 2px;
+  background: #6e8efb;
+}
+
+.timeline-card-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 15px;
+}
+
+.timeline-card-description {
+  padding: 0 25px 25px;
+  line-height: 1.6;
+  color: var(--text-color-4);
+}
+
+.timeline-card-footer {
+  padding: 15px 25px;
+  border-top: 2px solid var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.timeline-header {
+  position: relative;
+}
+
+.timeline-card-link {
+  text-decoration: none;
+  color: var(--text-color-3);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.timeline-card-link:hover {
+  opacity: 0.8;
+  color: var(--text-color-2);
+}
+/* Card Gallery Styles */
+.timeline-card-gallery {
+  padding: 0 25px 25px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination {
+  width: max-content !important;
+  left: 50% !important;
+  border-radius: 10px;
+  padding: 0 20px;
+  transform: translate(-50%, 0) !important;
+  background-color: var(--bg-color);
+}
+.swiper-pagination-bullet {
+  background: var(--text-color) !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color);
+}
+.timeline-card-date {
+  background: var(--bg-color);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-color-4);
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-card::before {
+    left: -21px;
+  }
+
+  .timeline-card::after {
+    left: -16px;
+    width: 15px;
+  }
+
+  .timeline-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-card-image {
+    margin: 10px 0 0 0;
+  }
+
+  .swiper-slide {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::before,
+  .timeline::after,
+  .timeline-card::before,
+  .timeline-card::after {
+    display: none;
+  }
+  .timeline,
+  .timeline-card {
+    padding-left: 0px;
+  }
+  .swiper-slide {
+    height: 160px;
+  }
+}

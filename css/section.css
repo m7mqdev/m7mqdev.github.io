@@ -1,0 +1,156 @@
+main .intro {
+  min-height: 100vh;
+  margin-top: 50px;
+}
+main section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+main section .text-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 6px;
+  position: relative;
+  gap: 15px;
+}
+
+main section a .external-link-icon {
+  display: none;
+}
+
+main section a:hover .external-link-icon {
+  display: inline;
+  font-size: 0.7rem;
+  line-height: normal;
+  vertical-align: super;
+}
+
+main section .h1 {
+  font-size: 40px;
+  color: var(--text-color-2);
+}
+
+main section .h2 {
+  font-size: 20px;
+  padding: 0 0 10px 0;
+  width: max-content;
+  border-bottom: solid var(--text-color-2) 3px;
+}
+main section .h3 {
+  padding: 0 5px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translate(0, -50%);
+  color: var(--primary-color);
+  width: max-content;
+  font-size: 16px;
+  z-index: 10;
+  background-color: var(--bg-color);
+  border-radius: 50px;
+}
+
+.typing-blinking-animation {
+  border-right: solid var(--primary-color) 3px;
+  animation: blinking 0.8s ease-in-out 2s infinite normal forwards;
+}
+
+@keyframes blinking {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+
+  50% {
+    border-right-color: var(--primary-color);
+  }
+}
+
+main section .p {
+  font-size: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main section .icons-container {
+  position: relative;
+  background-color: transparent;
+  width: max-content;
+  backdrop-filter: blur(35px);
+  border: 1px solid var(--secondary-color);
+  padding: 10px 10px;
+  border-radius: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+  width: 50%;
+  height: auto;
+  gap: 15px;
+}
+main section .icons-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-image: radial-gradient(var(--primary-color) -200%, transparent);
+  background-size: 100% 300%;
+  background-repeat: no-repeat;
+}
+main section .icons-container a {
+  width: 30px;
+  transition: 0.3s ease-out;
+  height: 30px;
+}
+main section .icons-container a:hover {
+  transform: translate(0, -20%);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.379));
+}
+main section .icons-container a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+main section a {
+  text-decoration: underline;
+}
+main section a:link,
+main section a:hover,
+main section a:active {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--text-color-2);
+}
+
+main section .link:hover {
+  color: var(--text-color-2);
+  border-bottom: none;
+}
+
+@media screen and (max-width: 750px) {
+  main section a:hover .external-link-icon {
+    display: none;
+  }
+
+  main section .h1 {
+    font-size: 25px;
+  }
+
+  main section .h2 {
+    font-size: 20px;
+  }
+
+  main section .p {
+    font-size: 13px !important;
+  }
+}
